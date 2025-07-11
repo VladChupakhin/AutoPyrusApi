@@ -33,7 +33,7 @@ def get_token(login: str, apikey: str, url: str) -> Dict[str, str]:
         'Content-Type': 'application/json'
     }
     
-def authenticate(): #-> Optional[Dict[str, str]]:
+def authenticate():  Optional[Dict[str, str]]:
     """Функция авторизации и получения токена"""
     try:
         url = f"{PYRUS_URL}/auth"
@@ -171,4 +171,3 @@ def main() -> None:
 
 if __name__ == "__main__": # Прост вызов
     main()
->>>>>>> 78000c59b119d36200a26b1a99be802f9e7185bb
