@@ -3,4 +3,4 @@
 # Игнорировать файлы
 *.log
 .env
-.json
+application.json
