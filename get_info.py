@@ -2,10 +2,13 @@ import requests
 from typing import Dict, Optional, Any
 import json
 
+with open ('application.json', 'r', encoding='utf-8') as f:
+    config = json.load(f)
+    
 PYRUS_URL = 'https://accounts.pyrus.com/api/v4'
 TASKS_URL = 'https://api.pyrus.com/v4/tasks'
-BOT_LOGIN = input('Введите Login: ').strip()
-BOT_KEY = input('Введите API Pyrus: ').strip()
+BOT_LOGIN = config["login"]
+BOT_KEY = config["security_key"]
 
 def get_token(login: str, apikey: str, url: str) -> Dict[str, str]:
     print("Запрос токена...")
